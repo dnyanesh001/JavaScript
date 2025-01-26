@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function greet() {
+            prompt("Hello, World!");
+        }//internal javascript
+        
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="intro"> This is my first javascript app</h1>
+    <h1 class="myName" id="myName">Hey Welcome to my page</h1>
+    <button class="name" onclick="alert('Hello, World!')">click me</button>
+    <button class="name"
+        onclick="document.getElementById('myName').innerHTML = 'Nikhil Lande'+' '+ 'Welcome to my page'">click
+        me</button><br>
+    <!-- inline javascript -->
+    <button onclick="greet()">button 3</button>
+    <script src="./script.js"></script>
+    <button type="button" onclick="alertMessage()">button 4</button>
+</body>
+
+</html>
