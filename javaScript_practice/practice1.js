@@ -129,3 +129,16 @@ setTimeout(()=>{
     console.log("Username and password of Vaibhav's (+91 8830215355) fetching....Please wait....")
 },4000)
 }
+let str1="Krishna";
+let str2="Veni";
+merstr="";
+for(let i=0;i<str1.length;i++){
+    if(i<str2.length){
+        merstr+=str1[i]+str2[i];
+    }
+    else{
+        merstr+=str1[i];
+    }
+}
+console.log(merstr);
+
