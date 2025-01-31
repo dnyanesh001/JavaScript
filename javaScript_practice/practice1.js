@@ -1,8 +1,16 @@
 console.log("Hello world!");
-function showInput(){
-    let input= document.getElementById("userInput").value;
+function showInput() {
+    let input = document.getElementById("userInput").value;
     alert("You enterd: " + input);
-    document.getElementById("userName").innerHTML=prompt("Enter Your Name");
+    let userResponse = confirm("Do you want to Change the Name?");
+    if (userResponse) {
+        // User clicked OK
+        document.getElementById("userName").innerHTML = prompt("Enter Your Name");
+    } else {
+        // User clicked Cancel
+        console.log("User canceled the action.");
+    }
+    
 }
 function variableExamples() {
     var a = 1;
@@ -25,24 +33,33 @@ function variableExamples() {
     console.log(d);
     console.log(e);
     console.log(f);
-// }
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+    console.log(f);
+}
+
 variableExamples();
-let str1 = "Hello";
-let str2 = "World";
-console.log(str2 + " " + str2);
-console.log(str1.endsWith(" World"));
+
+let strI = "Hello";
+let strII = "World";
+console.log(strI + " " + strII);
+console.log(strI.endsWith(" World"));
 let g = 10;
 let h = 5;
 console.log(g &= h);
 let x = null;
-console.log(x??5);
+console.log(x ?? 5);
 let myObject = {
-    greet: function(){
-        console.log("Hello from the  object");
+    greet: function () {
+        console.log("Hello from the object");
     }
 };
 myObject.greet();
 console.log(!!undefined);
+
 function printPattern(n) {
     for (let i = 0; i < n; i++) {
         let line = "";
@@ -58,6 +75,7 @@ function printPattern(n) {
 
 // Call the function
 printPattern(5);
+
 function printPattern1(n) {
     for (let i = 0; i < n; i++) {
         let line = "";
@@ -73,6 +91,7 @@ function printPattern1(n) {
 
 // Call the function
 printPattern1(5);
+
 function printReversePattern2(n) {
     for (let i = n; i > 0; i--) {
         let line = "";
@@ -104,40 +123,42 @@ function printPattern3(n) {
 
 // Call the function
 printPattern3(3);
-try{
-    setTimeout(()=>{
+
+try {
+    setTimeout(() => {
         try {
             console.log(Vaibhav)
         } catch (error) {
             console.log("hacking Vaibhav Suryavanshi account")
         }
-    },100)    
+    }, 100)
 }
-catch(error){
+catch (error) {
     console.log("Balle Balle")
 }
-setTimeout(()=>{
+
+setTimeout(() => {
     console.log("Hacking wifi....Please wait....")
-},1000)
-setTimeout(()=>{
+}, 1000)
+setTimeout(() => {
     console.log("Fetching username and password.....Please wait...")
-},2000)
-setTimeout(()=>{
+}, 2000)
+setTimeout(() => {
     console.log("Hacking Vaibhav's facebook id....Please wait....")
-},3000)
-setTimeout(()=>{
+}, 3000)
+setTimeout(() => {
     console.log("Username and password of Vaibhav's (+91 8830215355) fetching....Please wait....")
-},4000)
-}
-let str1="Krishna";
-let str2="Veni";
-merstr="";
-for(let i=0;i<str1.length;i++){
-    if(i<str2.length){
-        merstr+=str1[i]+str2[i];
+}, 4000)
+
+let str1 = "Krishna";
+let str2 = "Veni";
+let merstr = "";
+for (let i = 0; i < str1.length; i++) {
+    if (i < str2.length) {
+        merstr += str1[i] + str2[i];
     }
-    else{
-        merstr+=str1[i];
+    else {
+        merstr += str1[i];
     }
 }
 console.log(merstr);
