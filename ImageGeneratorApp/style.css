@@ -1,0 +1,105 @@
+/* css/style.css */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --items-per-page: 6;
+}
+
+/* Existing styles remain the same, add these new styles */
+
+.controls {
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+.image-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.download-btn, .share-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.download-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.share-btn {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+}
+
+.social-share {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+    
+    select, button {
+        width: 100%;
+    }
+}
+.search-filter {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 1rem 2.5rem 1rem 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.search-filter .fa-search {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}

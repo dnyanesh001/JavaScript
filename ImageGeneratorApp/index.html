@@ -1,0 +1,56 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Advanced Anime Generator ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>✨ Advanced Anime Generator ✨</h1>
+        
+        <div class="controls">
+            <div class="search-filter">
+                <input type="text" id="search-input" placeholder="Search generated images...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="input-group">
+                <input type="text" id="prompt" placeholder="Describe your dream anime character...">
+                <select id="style-preset">
+                    <option value="">Select Style</option>
+                    <option value="Studio Ghibli style">Studio Ghibli</option>
+                    <option value="Cyberpunk style">Cyberpunk</option>
+                    <option value="90s anime style">90s Anime</option>
+                    <option value="Watercolor painting style">Watercolor</option>
+                </select>
+                <select id="image-size">
+                    <option value="512x512">Small (512x512)</option>
+                    <option value="768x768" selected>Medium (768x768)</option>
+                    <option value="1024x1024">Large (1024x1024)</option>
+                </select>
+                <button onclick="generateImage()">Create!</button>
+            </div>
+        </div>
+
+        <div id="loading">🔮 Casting anime magic... Please wait 10-20 seconds...</div>
+        <div class="error" id="error"></div>
+
+        <div class="gallery" id="gallery"></div>
+
+        <div class="pagination">
+            <button id="prev-page">&laquo; Previous</button>
+            <span id="page-info">Page 1 of 1</span>
+            <button id="next-page">Next &raquo;</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

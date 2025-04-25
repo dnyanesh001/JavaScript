@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/submit', (req, res) => {
     const formData = req.body;
-    fs.writeFile('formData.json', JSON.stringify(formData, null, 2), (err) => {
+    fs.writeFile('fromData.json', JSON.stringify(formData, null, 2), (err) => {
         if (err) {
             console.error('Error writing to file:', err);
             res.status(500).json({ error: 'Failed to save form data' });
